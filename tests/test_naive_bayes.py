@@ -1,9 +1,10 @@
-import pandas as pd
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
 
 ### Naive Bayes Classifier Example
 

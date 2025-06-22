@@ -4,6 +4,32 @@ class NaiveBayes:
     
     #No Innit because no parameters are needed for this model
     
+    # Bayes Theorem:
+    # P(y|X) = ( P(X|y) * P(y) ) / P(y)
+    
+    # X = (x1, x2, ..., xn) features
+    # y = class label
+    
+    # Assuming features are independent given the class label, we can write it as:    
+    # P(y|X) = ( P(x1,y) * P(x2|y) * ... * P(xn|y) * P(y) ) / P(X)
+    
+    # y = argmax_y P(x1,y) * P(x2|y) * ... * P(xn|y) * P(y) as each probability is b/w 0 and 1. Multiplying can result in very small values.
+    # Taking log on both sides to avoid underflow:
+    
+    #Final form:
+    # y = argmax_y log(P(x1,y)) + log(P(x2|y)) + ... + log(P(xn|y)) + log(P(y))
+    
+    # P(y) is the prior probability of class y
+    # P(xi|y) is the likelihood of feature xi given class y called  the class conditional
+    
+    # Class Conditional Probability:
+    # For continuous features, we can assume a Gaussian distribution:
+    
+    # Gaussian Distribution:
+    # P(xi|y) = (1 / sqrt(2 * pi * var)) * exp(-(xi - mean)^2 / (2 * var))
+    
+    
+    
     def fit(self, X, y):
         n_samples, n_features = X.shape
         self._classes = np.unique(y)

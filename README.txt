@@ -7,6 +7,8 @@ Python version: 3.11.9
 Algorithms Implemented :-
 1. KNN
 2. Linear Regression
+3. Logistic Regression
+4. Naive Bayes
  
 Scope (V1):
 
