@@ -72,25 +72,42 @@ from sklearn.preprocessing import StandardScaler
 # X, y = dataset.data, dataset.target
 
 # # Load a real dataset
-df = pd.read_csv('datasets/heart_binclf.csv') #advertising_reg
-data = df.values
-X = data[:, :-1]  # Features
-y = data[:, -1]   # Target variable
-X = StandardScaler().fit_transform(X)  # Standardize features
+# df = pd.read_csv('datasets/heart_binclf.csv') #advertising_reg
+# data = df.values
+# X = data[:, :-1]  # Features
+# y = data[:, -1]   # Target variable
+# X = StandardScaler().fit_transform(X)  # Standardize features
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-from models.logistic_regression import LogisticRegression
+# from models.logistic_regression import LogisticRegression
+
+# def accuracy(y_true, y_pred):
+#     accuracy = np.sum(y_true == y_pred) / len(y_true)
+#     return accuracy
+
+# clf = LogisticRegression(lr=0.001, n_iters=1000)
+# clf.fit(X_train, y_train)
+# predictions = clf.predict(X_test)   
+
+# print(f"Accuracy: {accuracy(y_test, predictions)}")
+
+
+### Naive Bayes Classifier Example
 
 def accuracy(y_true, y_pred):
-    accuracy = np.sum(y_true == y_pred) / len(y_true)
-    return accuracy
+    return np.sum(y_true == y_pred) / len(y_true)
 
-clf = LogisticRegression(lr=0.001, n_iters=1000)
-clf.fit(X_train, y_train)
-predictions = clf.predict(X_test)   
+from models.naive_bayes import NaiveBayes
+
+X, y =datasets.make_classification(n_samples=1000, n_features=10, n_classes=2, random_state=123)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
+
+nb = NaiveBayes()
+nb.fit(X_train, y_train)
+predictions = nb.predict(X_test)
 
 print(f"Accuracy: {accuracy(y_test, predictions)}")
-
 
