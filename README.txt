@@ -9,6 +9,7 @@ Algorithms Implemented :-
 2. Linear Regression
 3. Logistic Regression
 4. Naive Bayes
+5. SVM (for bin-classification)
  
 Scope (V1):
 
