@@ -10,6 +10,7 @@ Algorithms Implemented :-
 3. Logistic Regression
 4. Naive Bayes
 5. SVM (for bin-classification)
+6. Decision Tree
  
 Scope (V1):
 
