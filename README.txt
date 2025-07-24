@@ -11,6 +11,7 @@ Algorithms Implemented :-
 4. Naive Bayes
 5. SVM (for bin-classification)
 6. Decision Tree
+7. Random Forest
  
 Scope (V1):
 
