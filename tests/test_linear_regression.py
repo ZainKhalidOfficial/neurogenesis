@@ -4,11 +4,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
-
+from neurogenesis.models import LinearRegression
 
 # # Linear Regression Example
 
@@ -25,7 +21,6 @@ y = data[:, -1]   # Target variable
 
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=42)
 
-from models.linear_regression import LinearRegression
 regressor = LinearRegression(lr=0.00001, n_iters=1000)
 regressor.fit(X_train, y_train)
 predictions = regressor.predict(X_test)

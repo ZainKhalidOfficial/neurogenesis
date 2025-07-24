@@ -1,5 +1,5 @@
 import numpy as np
-from models.decision_tree import DecisionTree
+from .decision_tree import DecisionTree
 from collections import Counter
 
 def bootstrap_sample(X, y):

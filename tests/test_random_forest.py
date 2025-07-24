@@ -1,13 +1,8 @@
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
-
-
-from models.random_forest import RandomForest
+# from models.random_forest import RandomForest
+from neurogenesis.models import RandomForest
 
 def accuracy(y_true, y_pred):
     accuracy = np.sum(y_true == y_pred) / len(y_true)

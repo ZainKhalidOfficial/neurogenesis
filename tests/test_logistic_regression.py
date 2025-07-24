@@ -4,13 +4,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
-
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
-
-
+from neurogenesis.models import LogisticRegression
 
 # Logistic Regression Example
 
@@ -28,7 +22,6 @@ X = StandardScaler().fit_transform(X)  # Standardize features
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-from models.logistic_regression import LogisticRegression
 
 def accuracy(y_true, y_pred):
     accuracy = np.sum(y_true == y_pred) / len(y_true)
