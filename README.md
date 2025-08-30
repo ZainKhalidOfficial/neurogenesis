@@ -19,6 +19,7 @@ Neurogenesis is a lightweight, educational machine learning library built from s
 - Support Vector Machine (SVM) – Binary Classification
 - Decision Tree
 - Random Forest
+- Artificial Neural Networks (ANN) 
 
 ---
 
@@ -33,7 +34,7 @@ Neurogenesis is a lightweight, educational machine learning library built from s
 - Random Forest  
 - K-Means Clustering  
 - AdaBoost  
-- Artificial Neural Networks (ANN)  
+- Artificial Neural Networks (ANN) 
 - Convolutional Neural Networks (CNN)  
 
 ---
