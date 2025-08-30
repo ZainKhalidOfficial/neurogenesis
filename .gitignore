@@ -1,5 +1,7 @@
 __pycache__/
+dist/*
 datasets/*
 match_results.py
-dist/*
+test.py
+
 

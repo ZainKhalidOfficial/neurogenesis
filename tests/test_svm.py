@@ -3,12 +3,7 @@ import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
-
-from models.svm import SVM
+from neurogenesis.models.svm import SVM
 
 X, y = datasets.make_blobs(n_samples=1000, n_features=10, centers=2, cluster_std=1.05, random_state=42)
 y = np.where(y == 0, -1, 1) # Convert labels to -1 and 1 for SVM
